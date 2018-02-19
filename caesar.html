@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+      <title> Playfair Cipher </title>
+      <link rel="stylesheet" href="style.css">
+      <script type="text/javascript" src="caesar.js"></script>
+      <style>
+
+          #button{
+            float: left;
+          }
+
+
+      </style>
+    </head>
+    <body>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a class="active" href="caesar.html">Caesar Cipher</a>
+        <a href="playfair.html">Playfair Cipher</a>
+      </div>
+      <div class="navContainer" onclick="openNav()">
+        <div class="navButton" ></div>
+        <div class="navButton"></div>
+        <div class="navButton"></div>
+      </div>
+      <div class="header">
+        <h1>Simple Caesar Cipher</h1>
+      </div>
+
+      <br><br>
+      <br><br>
+
+      <div class="gridContainer">
+        <div class="card-container">
+          <div class="card">
+            <div class="cipherInput">
+              <br><br>
+              <legend>Caesar Cipher</legend>
+              <br>
+              <label>Enter message for encryption</label><br>
+              <input id="encryptInput" type="text" required>
+              <label>Enter key for decryption</label><br>
+              <input id="encryptKey" type="text" required>
+              <br><br>
+              <div id="button">
+                <button onclick="Caesar(document.getElementById('encryptInput').value, 3)">Encrypt</button>
+              </div>
+
+              <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <div class="cipherOutput">
+              <br><br>
+              <legend>Caesar Cipher</legend>
+              <br>
+              <label>Enter message for decryption</label><br>
+              <input id="decryptInput" type="text" required>
+              <label>Enter key for decryption</label><br>
+              <input id="decryptKey" type="text" required>
+              <br><br>
+
+              <div id="button">
+                <button onclick="Caesar(document.getElementById('decryptInput').value, -2)">Decrypt</button>
+              </div>
+
+              <br><br>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <div class="sidebar">
+              <h3>About:</h3>
+              <p>
+                This is a side bar
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <div class="footer">
+              <footer>
+                Darwon Rashid Copyright &copy; 2018
+              </footer>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
