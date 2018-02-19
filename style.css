@@ -6,7 +6,7 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #B2DFDB; /* Black*/
+    background-color: #90CAF9;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -36,16 +36,26 @@
     margin-left: 50px;
 }
 
+#mySidenav .active{
+  color: #f1f1f1;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+    .gridContainer {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    	}
 }
 
 
 .navContainer{
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	background: #B2DFDB;
+	background: #90CAF9;
   margin-top: 10px;
   margin-right: 100px;
   float: left;
@@ -55,37 +65,26 @@
 
 }
 
-.navButton{
-	width: 35px;
-	height: 5px;
-	background-color: #009688;
-  margin: 6px;
-  margin-left: 10px;
-
-}
-
 /* GRID LAYOUT */
 
 .cipherInput{
   grid-column: 1/2;
-
-
 }
 
 .cipherOutput{
   grid-column: 2/3;
-
 }
 
-.footer{
-  grid-column: 1/4;
+.about{
+  grid-column: 1/3;
+  grid-row: 2/4;
   text-align: center;
 
 }
 
 .sidebar{
   grid-column: 3/3;
-  grid-row: 1/3;
+  grid-row: 1/4;
 }
 
 .gridContainer {
@@ -106,13 +105,16 @@
   padding:1em;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   text-align: center;
-  background: #00838f;
+  background: #90CAF9;
 }
 
 .header {
   margin-top: 5px;
-  float: left
+  font: 'Courier New';
+  float: left;
+  text-align: center;
 }
+
 /*
 a{
 	color: white;
@@ -169,10 +171,10 @@ a{
 */
 
 body{
-	background: #e0e0e0;
+	background: #FFCC80;
 	color: #fff;
 	line-height: 1.4em;
-	font-family: 'Roboto', 'Helvetica', sans-serif;
+	font-family: 'Roboto', sans-serif;
   margin: 0px;
 }
 
@@ -180,10 +182,15 @@ input, textarea{
 	width: 100%;
 }
 
+footer{
+  margin-top: 10px;
+  text-align: center;
+}
+
 #navImg{
   height: 45px;
-
   margin: 6px;
   margin-left: 10px;
+  vertical-align: middle;
 
 }

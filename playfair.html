@@ -3,33 +3,35 @@
   	<head>
       <title> Playfair Cipher </title>
       <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <script type="text/javascript" src="playfair.js"></script>
       <style>
-
-          #button{
-            float: left;
+          body{
+            font: 'Roboto', sans-serif;
           }
-
-
       </style>
-    </head>
-    <body>
+
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.html">Home</a>
         <a href="caesar.html">Caesar Cipher</a>
         <a class="active" href="playfair.html">Playfair Cipher</a>
       </div>
+
       <div class="navContainer" onclick="openNav()">
         <img id="navImg" src="nav.png"/>
       </div>
+
       <div class="header">
         <h1>Simple Playfair Cipher</h1>
       </div>
+      
+    </head>
+    <body>
+
 
       <br><br>
       <br><br>
-
       <div class="gridContainer">
             <div class="cipherInput">
               <br><br>
@@ -71,14 +73,16 @@
             </div>
 
 
-            <div class="footer">
-              <footer>
-                Darwon Rashid Copyright &copy; 2018
-              </footer>
+            <div class="about">
+              <p>
+                This is information about playfair
+              </p>
             </div>
 
-
-
       </div>
+
+      <footer>
+        Darwon Rashid Copyright &copy; 2018
+      </footer>
     </body>
 </html>
