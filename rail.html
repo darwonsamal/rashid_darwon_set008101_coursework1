@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   	<head>
-      <title> Hill Cipher </title>
+      <title> Rail Fence Cipher </title>
       <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <script type="text/javascript" src="utils.js"></script>
       <script type="text/javascript" src="railfence.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>
 
           body
@@ -27,7 +28,7 @@
       </div>
 
       <div class="header">
-        <h1>Simple Rail Fence Cipher</h1>
+        <h1>Rail Fence Cipher</h1>
       </div>
 
     </head>
@@ -38,27 +39,27 @@
       <br><br>
       <div class="gridContainer">
             <div class="cipherInput">
-              <br><br>
+
 
               <br>
-              <label>Enter message for encryption</label><br>
-              <input id="encryptInput" type="text" required>
-              <label>Enter key for decryption</label><br>
+              <label>Enter message for encryption</label><br><br>
+              <input id="encryptInput" type="text" required> <br><br>
+              <label>Enter key for decryption</label><br><br>
               <input id="encryptKey" type="text" required>
               <br><br>
               <div id="button">
                 <button onclick="encrypt(document.getElementById('encryptInput').value)">Encrypt</button>
               </div>
 
-              <br><br>
+              <br>
         </div>
             <div class="cipherOutput">
-              <br><br>
+
 
               <br>
-              <label>Enter message for decryption</label><br>
-              <input id="decryptInput" type="text" required>
-              <label>Enter key for decryption</label><br>
+              <label>Enter message for decryption</label><br><br>
+              <input id="decryptInput" type="text" required><br><br>
+              <label>Enter key for decryption</label><br><br>
               <input id="decryptKey" type="text" required>
               <br><br>
 
@@ -66,7 +67,7 @@
                 <button onclick="decrypt()">Decrypt</button>
               </div>
 
-              <br><br>
+              <br>
             </div>
 
             <div class="sidebar">

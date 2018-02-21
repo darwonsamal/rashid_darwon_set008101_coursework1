@@ -6,6 +6,7 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <script type="text/javascript" src="utils.js"></script>
       <script type="text/javascript" src="playfair.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>
           body{
             font: 'Roboto', sans-serif;
@@ -25,7 +26,7 @@
       </div>
 
       <div class="header">
-        <h1>Simple Playfair Cipher</h1>
+        <h1>Playfair Cipher</h1>
       </div>
 
     </head>
@@ -36,27 +37,27 @@
       <br><br>
       <div class="gridContainer">
             <div class="cipherInput">
-              <br><br>
-              <legend>Playfair Cipher</legend>
+
+
               <br>
-              <label>Enter message for encryption</label><br>
-              <input id="encryptInput" type="text" required>
-              <label>Enter key for decryption</label><br>
+              <label>Enter message for encryption</label><br><br>
+              <input id="encryptInput" type="text" required><br><br>
+              <label>Enter key for decryption</label><br><br>
               <input id="encryptKey" type="text" required>
               <br><br>
               <div id="button">
                 <button onclick="encrypt(document.getElementById('encryptInput').value)">Encrypt</button>
               </div>
 
-              <br><br>
+              <br>
         </div>
             <div class="cipherOutput">
-              <br><br>
-              <legend>Playfair Cipher</legend>
+
+
               <br>
-              <label>Enter message for decryption</label><br>
-              <input id="decryptInput" type="text" required>
-              <label>Enter key for decryption</label><br>
+              <label>Enter message for decryption</label><br><br>
+              <input id="decryptInput" type="text" required><br><br>
+              <label>Enter key for decryption</label><br><br>
               <input id="decryptKey" type="text" required>
               <br><br>
 
@@ -64,13 +65,13 @@
                 <button onclick="decrypt(document.getElementById('decryptInput').value)">Decrypt</button>
               </div>
 
-              <br><br>
+              <br>
             </div>
 
             <div class="sidebar">
-              <h3>About:</h3>
+              <h3>Usage:</h3>
               <p>
-                This is a side bar
+
               </p>
             </div>
 
