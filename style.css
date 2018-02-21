@@ -41,21 +41,40 @@
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media (max-height: 450px) {
+@media (max-width: 450px) {
 
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
     .gridContainer {
+      display: inherit;
       grid-template-columns: 1fr;
       grid-gap: 10px;
       padding-left: 10px;
       padding-right: 10px;
+      margin-top: 20px;
     	}
 
     .header {
       position: absolute;
       float: none;
-      margin-left:50px;
+      margin-left:100px;
+
+    }
+
+    .cipherInput {
+      grid-column: auto;
+    }
+
+    .cipherOutput {
+
+    }
+
+    .about {
+
+    }
+
+    .sidebar {
+
     }
 }
 
@@ -122,60 +141,16 @@
   text-align: center;
 }
 
-/*
-a{
-	color: white;
-	text-decoration: none;
-	padding-right: 20px;
-}
-*/
+#navImg{
+  height: 45px;
+  margin: 6px;
+  margin-left: 10px;
+  vertical-align: middle;
 
-/*
-#container{
-	background: #009688;
-	width: 960px;
-	margin: 30px auto;
-	overflow: hidden;
-	padding: 10px;
-}
-*/
-
-/*
-#main{
-	width: 60%;
-	float: left;
-	margin-top: 20px;
-	padding-left: 10px;
-}
-*/
-
-/*
-#sidebar{
-	float: right;
-	margin-top: 20px;
-	padding-right: 10px;
 }
 
-#footer{
-	width: 50%;
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
-}
 
-footer{
 
-	padding: 8px;
-}
-*/
-
-/*
-a{
-	color: white;
-	text-decoration: none;
-	padding-right: 20px;
-}
-*/
 
 body{
 	background: #FFCC80;
@@ -194,13 +169,6 @@ footer{
   text-align: center;
 }
 
-#navImg{
-  height: 45px;
-  margin: 6px;
-  margin-left: 10px;
-  vertical-align: middle;
-
-}
 
 
 
