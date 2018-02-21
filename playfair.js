@@ -67,6 +67,7 @@ function processMessage(message)
 
   message = message.toUpperCase();
   message = message.replace(/\s/g, '');
+  message = message.replace(/\s|\W|\d/igm, '');
 
   for(i = 0; i < message.length; i++)
   {
@@ -269,7 +270,7 @@ function decrypt(cipher)
         message = message + keyMatrix[positionA[0]][positionA[1]] + keyMatrix[positionB[0]][positionB[1]];
     }
 
-    message = message.replace('X', '');
+    message = message.replace(/x|X/g, '');
     message = message.toLowerCase();
 
     document.getElementById('encryptKey').value = key;

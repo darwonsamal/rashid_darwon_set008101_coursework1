@@ -42,6 +42,7 @@
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media (max-height: 450px) {
+
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
     .gridContainer {
@@ -50,6 +51,12 @@
       padding-left: 10px;
       padding-right: 10px;
     	}
+
+    .header {
+      position: absolute;
+      float: none;
+      margin-left:50px;
+    }
 }
 
 
@@ -194,3 +201,7 @@ footer{
   vertical-align: middle;
 
 }
+
+
+
+/*TODO buttons style sucks make it better. input ones too
