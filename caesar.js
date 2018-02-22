@@ -1,4 +1,4 @@
-/*TODO FUCING FIX*/
+
 
 function  encrypt()
 {
@@ -7,15 +7,15 @@ function  encrypt()
 
     key = parseInt(key);
 
-    var cipher = '';
-
-    if(!Number.isInteger(key))
+    if(checkIfTextEmpty(text) == false || checkIfKeyEmpty(key) == false || checkIfKeyAnInteger(key) == false)
     {
-      alert("key is not an integer");
-  		return;
+      return;
     }
 
-    if (key < 0 || key >= 26) {
+    var cipher = '';
+
+    if (key < 0 || key >= 26)
+    {
     	alert("Shift is out of range");
     	return;
     }
@@ -38,10 +38,7 @@ function  encrypt()
         }
 
     }
-      document.getElementById('encryptKey').value = '';
-      document.getElementById('decryptKey').value = key;
-      document.getElementById('decryptInput').value = cipher;
-      document.getElementById('encryptInput').value = '';
+      outputEncryption(cipher, key);
 }
 
 function decrypt()
@@ -52,15 +49,16 @@ function decrypt()
 
       key = parseInt(key);
 
-      var cipher = '';
-
-      if(!Number.isInteger(key))
+      if(checkIfTextEmpty(text) == false || checkIfKeyEmpty(key) == false || checkIfKeyAnInteger(key) == false)
       {
-        alert("key is not an integer");
-    		return;
+        return;
       }
 
-      if (key < 0 || key >= 26) {
+
+      var cipher = '';
+
+      if (key < 0 || key >= 26)
+      {
       	alert("Shift is out of range");
       	return;
       }
@@ -84,9 +82,5 @@ function decrypt()
 
       }
 
-      document.getElementById('encryptKey').value = key;
-      document.getElementById('decryptKey').value = '';
-      document.getElementById('encryptInput').value = cipher;
-      document.getElementById('decryptInput').value = '';
-
+      outputDecryption(cipher, key);
 }

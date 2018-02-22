@@ -1,21 +1,15 @@
-/* Set the width of the side navigation to 250px */
+/* Opens the nav bar from the left side by setting width to 250px*/
 function openNav()
 {
     document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("navContainer").style.width = "0px";
+
 }
 
-/* Set the width of the side navigation to 0 */
+/* Closes the nav bar from the left side by setting width to 0px*/
 function closeNav()
 {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("navContainer").style.width = "0px";
 }
-
-
-
-
-
 
 
 
@@ -45,6 +39,49 @@ function createEmptyMatrix(key)
 
 }
 
+function checkIfTextEmpty(string)
+{
+  if(string == "")
+  {
+    alert("Enter input for Encryption/Decryption ");
+    return false;
+  }
+}
+
+function checkIfKeyEmpty(key)
+{
+  if(key == "")
+  {
+    alert("Enter key for Encryption/Decryption ");
+    return false;
+  }
+}
+
+function checkIfKeyAnInteger(key)
+{
+  if(!Number.isInteger(key))
+  {
+    alert("Key is not an integer! Enter Integer as key");
+    return false;
+  }
+}
+
+function outputEncryption(cipher, key)
+{
+  document.getElementById('encryptKey').value = '';
+  document.getElementById('decryptKey').value = key;
+  document.getElementById('decryptInput').value = cipher;
+  document.getElementById('encryptInput').value = '';
+}
+
+function outputDecryption(message, key)
+{
+  document.getElementById('encryptKey').value = key;
+  document.getElementById('decryptKey').value = '';
+  document.getElementById('encryptInput').value = message;
+  document.getElementById('decryptInput').value = '';
+}
+
 /*PLAYFAIR EXCLUSIVE HELPER FUNCTIONS */
 function findPosition(keyMatrix, letter)
 {
@@ -68,8 +105,9 @@ function findPosition(keyMatrix, letter)
 
 function processPlayfairMessage(message)
 {
+
   var temp_message = [];
-  var check = false;
+  var flag = false;
   var y = 0;
   var i = 0;
   var message_matrix = [];
@@ -80,17 +118,17 @@ function processPlayfairMessage(message)
 
   for(i = 0; i < message.length; i++)
   {
-    check = false;
+    flag = false;
     temp_message.push(message[i]);
 
     if(temp_message[y] == message[i + 1])
     {
       temp_message.splice(y + 1, 0, 'x');
-      check = true;
+      flag = true;
       y+=2;
     }
 
-    if(check == false)
+    if(flag == false)
     {
       y++;
     }

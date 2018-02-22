@@ -7,12 +7,6 @@
       <script type="text/javascript" src="utils.js"></script>
       <script type="text/javascript" src="playfair.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>
-          body{
-            font: 'Roboto', sans-serif;
-          }
-      </style>
-
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.html">Home</a>
@@ -21,8 +15,8 @@
         <a href="rail.html">Rail Fence Cipher</a>
       </div>
 
-      <div class="navContainer" onclick="openNav()">
-        <img id="navImg" src="nav.png"/>
+      <div class="navContainer">
+          <a href="javascript:void(0)" onclick="openNav()"><img id="navImg" src="nav.png"/></a>
       </div>
 
       <div class="header">
@@ -38,34 +32,31 @@
       <div class="gridContainer">
             <div class="cipherInput">
 
-
               <br>
-              <label>Enter message for encryption</label><br><br>
-              <input id="encryptInput" type="text" required><br><br>
+              <label>Enter message for decryption</label><br><br>
+              <textarea id="encryptInput" type="text"></textarea><br><br>
               <label>Enter key for decryption</label><br><br>
-              <input id="encryptKey" type="text" required>
+              <textarea id="encryptKey" type="text"></textarea>
               <br><br>
-              <div id="button">
-                <button onclick="encrypt(document.getElementById('encryptInput').value)">Encrypt</button>
-              </div>
+
+
+              <button onclick="encrypt()">Encrypt</button>
+
 
               <br>
         </div>
             <div class="cipherOutput">
+                <br>
+                <label>Enter message for decryption</label><br><br>
+                <textarea id="decryptInput" type="text"></textarea><br><br>
+                <label>Enter key for decryption</label><br><br>
+                <textarea id="decryptKey" type="text"></textarea>
+                <br><br>
+
+                <button onclick="decrypt()">Decrypt</button>
 
 
-              <br>
-              <label>Enter message for decryption</label><br><br>
-              <input id="decryptInput" type="text" required><br><br>
-              <label>Enter key for decryption</label><br><br>
-              <input id="decryptKey" type="text" required>
-              <br><br>
-
-              <div id="button">
-                <button onclick="decrypt(document.getElementById('decryptInput').value)">Decrypt</button>
-              </div>
-
-              <br>
+                <br>
             </div>
 
             <div class="sidebar">

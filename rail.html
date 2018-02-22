@@ -23,8 +23,8 @@
         <a class="active" href="rail.html">Rail Fence Cipher</a>
       </div>
 
-      <div class="navContainer" onclick="openNav()">
-        <img id="navImg" src="nav.png"/>
+      <div class="navContainer">
+        <a href="javascript:void(0)" onclick="openNav()"><img id="navImg" src="nav.png"/></a>
       </div>
 
       <div class="header">
@@ -43,13 +43,13 @@
 
               <br>
               <label>Enter message for encryption</label><br><br>
-              <input id="encryptInput" type="text" required> <br><br>
+              <textarea id="encryptInput" type="text"></textarea ><br><br>
               <label>Enter key for decryption</label><br><br>
-              <input id="encryptKey" type="text" required>
+              <textarea id="encryptKey" type="text"></textarea>
               <br><br>
-              <div id="button">
-                <button onclick="encrypt(document.getElementById('encryptInput').value)">Encrypt</button>
-              </div>
+
+              <button onclick="encrypt()">Encrypt</button>
+
 
               <br>
         </div>
@@ -58,14 +58,14 @@
 
               <br>
               <label>Enter message for decryption</label><br><br>
-              <input id="decryptInput" type="text" required><br><br>
+              <textarea id="decryptInput" type="text"></textarea><br><br>
               <label>Enter key for decryption</label><br><br>
-              <input id="decryptKey" type="text" required>
+              <textarea id="decryptKey" type="text"></textarea>
               <br><br>
 
-              <div id="button">
-                <button onclick="decrypt()">Decrypt</button>
-              </div>
+
+              <button onclick="decrypt()">Decrypt</button>
+
 
               <br>
             </div>

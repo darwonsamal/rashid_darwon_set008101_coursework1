@@ -42,7 +42,7 @@
 }
 
 
-.navContainer{
+.navContainer {
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	background: #90CAF9;
   margin-top: 10px;
@@ -100,7 +100,7 @@
 
 .header {
   margin-top: 5px;
-  font: 'Courier New';
+  color: #aebfbe;
   float: left;
   text-align: center;
   margin-left: 75px;
@@ -111,34 +111,73 @@
   margin: 6px;
   margin-left: 10px;
   vertical-align: middle;
+}
 
+.caesarKey {
+  width: 10%;
+  height: 25px;
+}
+
+.caesarLabel {
+  float: left;
 }
 
 
 
-
 body{
-	background: #FFCC80;
+	background: #e0f2f1;
 	color: #fff;
 	line-height: 1.4em;
 	font-family: 'Roboto', sans-serif;
   margin: 0px;
 }
 
-input, textarea{
+textarea{
+  height: 75px;
 	width: 100%;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 1px solid #757575;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #e1f5fe;
 }
 
 footer{
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: center;
+  color: #aebfbe;
+  font-size: 18px;
 }
+
+button {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 12px 24px;
+  font-family: 'Roboto', sans-serif;
+  border-width: 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  transition: background-color .3s;
+  background-color: #64b5f6;
+  color: #ecf0f1;
+
+}
+
+button:hover{background-color: #0d47a1;}
+
 
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 500px) {
 
-    .sidenav {padding-top: 15px;}
+    .sidenav {
+      padding-top: 15px;
+    }
     .sidenav a {font-size: 18px;}
 
     .gridContainer {
@@ -179,9 +218,6 @@ footer{
       grid-column: auto;
       grid-row: auto;
     }
-
-
-
 
 }
 

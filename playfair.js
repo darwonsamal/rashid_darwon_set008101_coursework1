@@ -1,13 +1,20 @@
 
-//TODO shorten code
-/* PLAYFAIR CIPHER SHIT RIGHT HERE */
-
-
-function encrypt(message)
+function encrypt()
 {
-  var messageMatrix = processPlayfairMessage(message);
+
+  var message = document.getElementById('encryptInput').value;
   var key = document.getElementById('encryptKey').value;
+
+  if(checkIfTextEmpty(message) == false || checkIfKeyEmpty(key) == false)
+  {
+    return;
+  }
+
+  var messageMatrix = processPlayfairMessage(message);
   var keyMatrix = createPlayfairKeyMatrix(key);
+
+
+
 
   var cipher = "";
 
@@ -65,22 +72,28 @@ function encrypt(message)
 
     cipher = cipher + keyMatrix[positionA[0]][positionA[1]] + keyMatrix[positionB[0]][positionB[1]];
   }
-  document.getElementById('encryptKey').value = '';
-  document.getElementById('decryptKey').value = key;
-  document.getElementById('decryptInput').value = cipher;
-  document.getElementById('encryptInput').value = '';
+
+  outputEncryption(cipher, key);
 
 }
 
 
-function decrypt(cipher)
+function decrypt()
 {
-  var j = 0;
-
-  var cipherMatrix = [];
+  var cipher = document.getElementById('decryptInput').value;
   var key = document.getElementById('decryptKey').value;
-  var keyMatrix = createPlayfairKeyMatrix(key);
 
+  if(checkIfTextEmpty(cipher) == false || checkIfKeyEmpty(key) == false)
+  {
+    return;
+  }
+
+  cipher = cipher.toLowerCase();
+
+
+  var keyMatrix = createPlayfairKeyMatrix(key);
+  var j = 0;
+  var cipherMatrix = [];
   var message = "";
 
   //TODO shorten code
@@ -88,8 +101,6 @@ function decrypt(cipher)
   {
     cipherMatrix.push([]);
   }
-
-  cipher = cipher.toLowerCase();
 
   j = 0;
 
@@ -147,8 +158,5 @@ function decrypt(cipher)
     message = message.replace(/x|X/g, '');
     message = message.toLowerCase();
 
-    document.getElementById('encryptKey').value = key;
-    document.getElementById('decryptKey').value = '';
-    document.getElementById('encryptInput').value = message;
-    document.getElementById('decryptInput').value = '';
+    outputDecryption(message, key);
 }
