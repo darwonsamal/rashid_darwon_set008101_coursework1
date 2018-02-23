@@ -1,7 +1,6 @@
 
 function encrypt()
 {
-
   var message = document.getElementById('encryptInput').value;
   var key = document.getElementById('encryptKey').value;
 
@@ -10,11 +9,8 @@ function encrypt()
     return;
   }
 
-  var messageMatrix = processPlayfairMessage(message);
+  var messageMatrix = processPlayfairMessage(message, true);
   var keyMatrix = createPlayfairKeyMatrix(key);
-
-
-
 
   var cipher = "";
 
@@ -77,7 +73,6 @@ function encrypt()
 
 }
 
-
 function decrypt()
 {
   var cipher = document.getElementById('decryptInput').value;
@@ -89,7 +84,6 @@ function decrypt()
   }
 
   cipher = cipher.toLowerCase();
-
 
   var keyMatrix = createPlayfairKeyMatrix(key);
   var j = 0;

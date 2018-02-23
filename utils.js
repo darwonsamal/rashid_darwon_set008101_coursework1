@@ -26,16 +26,16 @@ function processString(string)
   return string;
 }
 
-function createEmptyMatrix(key)
+function createEmptyMatrix(sizeOfMatrix)
 {
-  var test = [];
+  var matrix = [];
 
-  for(var i = 0; i < key; i++)
+  for(var i = 0; i < sizeOfMatrix; i++)
   {
-      test.push([]);
+      matrix.push([]);
   }
 
-  return test;
+  return matrix;
 
 }
 
@@ -103,7 +103,7 @@ function findPosition(keyMatrix, letter)
 }
 
 
-function processPlayfairMessage(message)
+function processPlayfairMessage(message, check)
 {
 
   var temp_message = [];
@@ -113,15 +113,14 @@ function processPlayfairMessage(message)
   var message_matrix = [];
 
   message = message.toLowerCase();
-  message = message.replace(/\s/g, '');
-  message = message.replace(/\s|\W|\d/igm, '');
+  //message = processString(message);
 
   for(i = 0; i < message.length; i++)
   {
     flag = false;
     temp_message.push(message[i]);
 
-    if(temp_message[y] == message[i + 1])
+    if(temp_message[y] == message[i + 1] && check == true)
     {
       temp_message.splice(y + 1, 0, 'x');
       flag = true;
@@ -160,10 +159,13 @@ function processPlayfairMessage(message)
 function createPlayfairKeyMatrix(key)
 {
   var tempMatrix = [];
-  var finalMatrix = [];
+  var finalMatrix = createEmptyMatrix(5);
   var alphabet = "abcdefghiklmnopqrstuvwxyz"
-  key = key.replace('j', 'i').replace(/[^a-z]/g, '');
+  key = processString(key);
+
   key = key.toLowerCase();
+  key = key.replace('j', 'i');
+
 
   for(var i = 0; i < key.length; i++)
   {
@@ -180,8 +182,6 @@ function createPlayfairKeyMatrix(key)
       tempMatrix.push(alphabet[j]);
     }
   }
-
-  finalMatrix = createEmptyMatrix(5);
 
   var y = 0;
 
