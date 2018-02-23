@@ -22,7 +22,6 @@ function processString(string)
   string = string.replace(/ /g, '');
   string = string.replace(/\s|\W|\d/igm, '');
 
-
   return string;
 }
 
@@ -113,7 +112,8 @@ function processPlayfairMessage(message, check)
   var message_matrix = [];
 
   message = message.toLowerCase();
-  //message = processString(message);
+  message = processString(message);
+  message = message.replace(/j|J/g, 'i');
 
   for(i = 0; i < message.length; i++)
   {

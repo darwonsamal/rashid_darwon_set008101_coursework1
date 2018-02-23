@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html>
   	<head>
-      <title> Rail Fence Cipher </title>
+      <title> Simon Wells Cipher </title>
       <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <script type="text/javascript" src="utils.js"></script>
-      <script type="text/javascript" src="railfence.js"></script>
+      <script type="text/javascript" src="simon.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>
 
-          body
-          {
-            font: 'Roboto', sans-serif;
-          }
-      </style>
 
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.html">Home</a>
         <a href="caesar.html">Caesar Cipher</a>
         <a href="playfair.html">Playfair Cipher</a>
-        <a class="active" href="rail.html">Rail Fence Cipher</a>
-        <a href="simon.html">Simon Wells Cipher</a>
+        <a href="rail.html">Rail Fence Cipher</a>
+        <a class="active" href="simon.html">Simon Wells Cipher</a>
       </div>
 
       <div class="navContainer">
-        <a href="javascript:void(0)" onclick="openNav()"><img id="navImg" src="nav.png"/></a>
+          <a href="javascript:void(0)" onclick="openNav()"><img id="navImg" src="nav.png"/></a>
       </div>
 
       <div class="header">
-        <h1>Rail Fence Cipher</h1>
+        <h1>Simon Wells Cipher</h1>
       </div>
 
     </head>
@@ -40,34 +34,27 @@
       <br><br>
       <div class="gridContainer">
             <div class="cipherInput">
-
-
               <br>
-              <label>Enter message for encryption</label><br><br>
-              <textarea id="encryptInput" type="text"></textarea ><br><br>
-              <label>Enter key for decryption</label><br><br>
-              <textarea id="encryptKey" type="text"></textarea>
-              <br><br>
-
+              <label>Enter message for decryption</label><br><br>
+              <textarea id="encryptInput" type="text"></textarea><br>
+              <label>Enter text key for decryption</label><br><br>
+              <textarea  id="encryptKey" type="text"></textarea><br>
+              <label class="caesarLabel">Enter numeric key for decryption</label><br><br>
+              <textarea class="numberKey" id="encryptNumericKey" type="text"></textarea>
+              <br>
               <button onclick="encrypt()">Encrypt</button>
-
-
               <br>
         </div>
             <div class="cipherOutput">
-
-
               <br>
               <label>Enter message for decryption</label><br><br>
-              <textarea id="decryptInput" type="text"></textarea><br><br>
-              <label>Enter key for decryption</label><br><br>
-              <textarea id="decryptKey" type="text"></textarea>
-              <br><br>
-
-
+              <textarea id="decryptInput" type="text"></textarea><br>
+              <label>Enter text key for encryption</label><br><br>
+              <textarea  id="decryptKey" type="text"></textarea><br>
+              <label class="caesarLabel">Enter numeric key for encryption</label><br><br>
+              <textarea class="numberKey" id="decryptNumericKey" type="text"></textarea>
+              <br>
               <button onclick="decrypt()">Decrypt</button>
-
-
               <br>
             </div>
 
@@ -81,7 +68,7 @@
 
             <div class="about">
               <p>
-                This is information about rail fence
+                This is information about Simon
               </p>
             </div>
 

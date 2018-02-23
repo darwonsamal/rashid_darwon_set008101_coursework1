@@ -21,6 +21,7 @@
     color: #818181;
     display: block;
     transition: 0.3s;
+    position: static;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -113,8 +114,8 @@
   vertical-align: middle;
 }
 
-.caesarKey {
-  width: 10%;
+.numberKey {
+  width: 15%;
   height: 25px;
 }
 

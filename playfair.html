@@ -2,18 +2,22 @@
 <html>
   	<head>
       <title> Playfair Cipher </title>
+
       <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
       <script type="text/javascript" src="utils.js"></script>
-      <script type="text/javascript" src="TestBifid.js"></script>
       <script type="text/javascript" src="playfair.js"></script>
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="caesar.html">Caesar Cipher</a>
-        <a class="active" href="playfair.html">Playfair Cipher</a>
-        <a href="rail.html">Rail Fence Cipher</a>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="caesar.html">Caesar Cipher</a>
+          <a class="active" href="playfair.html">Playfair Cipher</a>
+          <a href="rail.html">Rail Fence Cipher</a>
+          <a href="simon.html">Simon Wells Cipher</a>
       </div>
 
       <div class="navContainer">
@@ -21,33 +25,32 @@
       </div>
 
       <div class="header">
-        <h1>Playfair Cipher</h1>
+          <h1>Playfair Cipher</h1>
       </div>
 
     </head>
     <body>
-
-
-      <br><br>
-      <br><br>
-      <div class="gridContainer">
+        <br><br>
+        <br><br>
+        <div class="gridContainer">
             <div class="cipherInput">
 
-              <br>
-              <label>Enter message for decryption</label><br><br>
-              <textarea id="encryptInput" type="text"></textarea><br><br>
-              <label>Enter key for decryption</label><br><br>
-              <textarea id="encryptKey" type="text"></textarea>
-              <br><br>
+                <br>
+                <label>Enter message for decryption</label><br><br>
+                <textarea id="encryptInput" type="text"></textarea><br><br>
+                <label>Enter key for decryption</label><br><br>
+                <textarea id="encryptKey" type="text"></textarea>
+                <br><br>
 
 
-              <button onclick="bifidEncrypt()">Encrypt</button>
+                <button onclick="encrypt()">Encrypt</button>
 
+                <br>
+            </div>
 
-              <br>
-        </div>
             <div class="cipherOutput">
                 <br>
+
                 <label>Enter message for decryption</label><br><br>
                 <textarea id="decryptInput" type="text"></textarea><br><br>
                 <label>Enter key for decryption</label><br><br>
@@ -55,25 +58,22 @@
                 <br><br>
 
                 <button onclick="decrypt()">Decrypt</button>
-
-
                 <br>
             </div>
 
             <div class="sidebar">
-              <h3>Usage:</h3>
-              <p>
+                <h3>Usage:</h3>
+                <p>
 
-              </p>
-            </div>
+                </p>
+           </div>
 
 
-            <div class="about">
+           <div class="about">
               <p>
                 This is information about playfair
               </p>
-            </div>
-
+          </div>
       </div>
 
       <footer>
