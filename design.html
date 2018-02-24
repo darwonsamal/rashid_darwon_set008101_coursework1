@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+      <title>Website Design</title>
+
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+      <script type="text/javascript" src="js/utils.js"></script>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+
+        .header{
+          float: none;
+        }
+
+        .navContainer{
+          padding-left: 0px;
+          display: inline;
+          margin-left: 375px;
+
+          margin-right: 0px;
+
+
+        }
+
+        .sidenav p {
+
+          padding-left: 32px;
+        }
+
+        h3 {
+          padding-left: 32px;
+
+        }
+
+        #textareaExample {
+          margin-left: 300px;
+        }
+
+        #buttonExample{
+          margin-left: 345px;
+        }
+
+        #gridButtonExample{
+          margin-left: 55px;
+        }
+
+        #exampleGrid{
+          margin-left: 275px;
+          margin-bottom: 50px;
+        }
+
+
+
+
+      </style>
+
+
+      <div id="mySidenav" class="sidenav">
+          <h3>
+            My navigational links
+          </h3>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">font-size: 25px</a>
+          <a href="#">font-family: Roboto</a>
+          <a href="#"> color: #818181</a>
+          <a href="#">transition: 0.3s</a>
+          <a href="#">hover and active color: #F1F1F1</a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">padding: 8px 8px 8px 32px</a>
+          <h3>My side nav</h3>
+          <p>
+            position: fixed
+          </p>
+          <p>
+            background-color: #90CAF9
+          </p>
+          <p>
+            box-shadow applied
+          </p>
+          <p>
+            overflow-x: hidden
+          </p>
+          <p>
+            transition: 0.5s
+          </p>
+      </div>
+
+
+
+
+      <div class="header">
+          <h1>My header</h1>
+          <p>
+            H1,
+            font-family: Roboto,
+            font-color: #AEBFBE
+            text-align
+          </p>
+          <p>
+            body background color: #E0F2F1
+          </p>
+      </div>
+
+
+    </head>
+    <body>
+
+      <br>
+
+
+        <div class="header">
+          <h1>My Nav Button</h1>
+          <p>
+            image: hamburger icon,
+            background-color: #90CAF9,
+            box-shadow applied,
+            display: inline
+          </p>
+          <p>
+            click button to open side nav
+          </p>
+        </div>
+
+        <div class="navContainer">
+            <a href="javascript:void(0)" onclick="openNav()">
+              <img id="navImg" src="assets/nav.png"/>
+            </a>
+        </div>
+        <br><br>
+        <br><br>
+
+
+        <div class="header">
+          <h1>My textarea</h1>
+          <p>
+           font-size: 20px,
+           outline: none,
+           box-shadow applied,
+           display: block
+          </p>
+          <p>
+            border: none,
+            border-radius: 5px,
+            border-bottom: 1px solid,
+            height 75px
+          </p>
+          <p>
+            background-color: #E1F5FE
+          </p>
+       </div>
+
+        <textarea id="textareaExample" type="text"> this is what I look like</textarea><br><br>
+
+                <div class="header">
+                  <h1>My button</h1>
+                  <p>
+                   padding 12px 24px,
+                   position relative,
+                  </p>
+                  <p>
+                    box-shadow applied,
+                    display: block
+                  </p>
+                  <p>
+                    border-wdith: 0,
+                    border-radius: 5px,
+                    border-bottom: 1px solid
+                  </p>
+                  <p>
+                    transition: background-color 0.3s,
+                    overflow: hidden
+                  </p>
+                  <p>
+                    background-color: #64B5F6,
+                    background-color hover: #0D47A1
+                  </p>
+                  <p>
+                    overflow: hidden,
+                    font-family: Roboto
+                  </p>
+               </div>
+
+        <button id="buttonExample" onclick="location.href='assets/hello.html';">I am a button</button>
+        <br><br>
+
+        <div class="header">
+          <h1>My Grid</h1>
+          <p>
+            box-shadow applied on divs inside grid container,
+          </p>
+            grid-template-columns: 1fr 1fr 1fr,
+            grid-gap: 20px,
+            display: grid,
+          <p>
+            align-items: stretch,
+            justify-items: stretch
+          </p>
+          <p>
+            padding-left: 20px,
+            padding-right: 20px
+          </p>
+          <p>
+            transition: 1s
+          </p>
+        </div>
+
+
+        <div id="exampleGrid" class="gridContainer">
+            <div>
+                <h1> I am a grid</h1>
+
+                <p>
+                  here is what a text area looks like in a grid
+                </p>
+                <textarea></textarea>
+
+                <p>
+                  and now a button
+                </p>
+
+                <button id="gridButtonExample">A button</button>
+
+            </div>
+
+      </div>
+    </body>
+</html>

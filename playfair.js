@@ -90,7 +90,6 @@ function decrypt()
   var cipherMatrix = [];
   var message = "";
 
-  //TODO shorten code
   for(j = 1; j < cipher.length/ 2 + 1; j++)
   {
     cipherMatrix.push([]);
