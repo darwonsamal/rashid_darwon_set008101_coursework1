@@ -1,4 +1,12 @@
 
+/*
+
+Author: Darwon Rashid
+Matric Number: 40280334
+Description: Encryption and decryption of railfence Cipher.
+
+ */
+
 function encrypt()
 {
   var message = document.getElementById('encryptInput').value;
@@ -19,9 +27,7 @@ function encrypt()
   var row = 0;
   var col = 0;
   var moved = false;
-  var test = createEmptyMatrix(key);
-
-
+  var keyMatrix = createEmptyMatrix(key);
 
   for( i = 0; i < message.length; i++)
   {
@@ -30,7 +36,7 @@ function encrypt()
       moved = !moved;
     }
 
-    test[row][col++] = message[i];
+    keyMatrix[row][col++] = message[i];
 
     if(moved)
     {
@@ -46,9 +52,9 @@ function encrypt()
   {
     for(k = 0; k < message.length; k++)
     {
-      if(test[i][k])
+      if(keyMatrix[i][k])
       {
-        cipher += test[i][k];
+        cipher += keyMatrix[i][k];
       }
     }
   }

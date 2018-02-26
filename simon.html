@@ -2,7 +2,7 @@
 <html>
   	<head>
       <title> Simon Wells Cipher </title>
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style/style.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <script type="text/javascript" src="js/utils.js"></script>
       <script type="text/javascript" src="js/simon.js"></script>
@@ -59,17 +59,27 @@
             </div>
 
             <div class="sidebar">
-              <h3>About:</h3>
+              <h2>Usage:</h2>
               <p>
-                This is a side bar
+                Type the message you want to encrypt/decrypt.
+              </p>
+              <p>
+                The first key must be a word or phrase and the second key must be a number.
               </p>
             </div>
 
 
             <div class="about">
-              <p>
-                This is information about Simon
-              </p>
+              <h2>How it works:</h2>
+               <p>
+              The way the Simon Wells cipher works is by taking the users message, and just like the Playfair Cipher, splits it into pairs of 2. There is no need for the letter 'x' to be inserted between letters that are the same for it does not matter in this case. Then just like the Playfair cipher, you find where each letter is positioned in the key matrix that is made out of the key phrase the user typed in. However, unlike the Playfair cipher, we find the row and column of each letter that is positioned in the key matrix and take those numbers. You are then left with numbers that for each pair of numbers represents a letter in the key matrix. Then each number gets an amount added depending on the second key the user types in which is numeric.
+
+
+               </p>
+
+               <p>
+                 To decrypt you take away the amount added to each number and then find what letter each pair of number represents in the key matrix. In each pair, the first number is the row, and the second number is the column.
+               </p>
             </div>
 
       </div>

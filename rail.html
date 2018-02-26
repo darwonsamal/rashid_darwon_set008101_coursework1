@@ -2,7 +2,7 @@
 <html>
   	<head>
       <title> Rail Fence Cipher </title>
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style/style.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <script type="text/javascript" src="js/utils.js"></script>
       <script type="text/javascript" src="js/railfence.js"></script>
@@ -54,17 +54,23 @@
             </div>
 
             <div class="sidebar">
-              <h3>About:</h3>
+              <h3>Usage:</h3>
               <p>
-                This is a side bar
+                Type the message you want to encrypt/decrypyt.
+              </p>
+              <p>
+                The key you enter must be a number and not bigger than the length of message.
               </p>
             </div>
 
 
             <div class="about">
-              <p>
-                This is information about rail fence
-              </p>
+              <h2>How it works:</h2>
+               <p>
+                  The way the Rail Fence Cipher works is by taking the users message and splitting that message across lines in a "zig-zag" fashion. Then the encrypted message is formed by reading each line in order. The number of lines depends on the user's key. This implementation is not complete, it will not work if the key is bigger than the length of the message.
+
+               </p>
+
             </div>
 
       </div>

@@ -3,7 +3,7 @@
   	<head>
       <title> Playfair Cipher </title>
 
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style/style.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
       <script type="text/javascript" src="js/utils.js"></script>
@@ -50,28 +50,36 @@
 
             <div class="cipherOutput">
                 <br>
-
                 <label>Enter message for decryption</label><br><br>
                 <textarea id="decryptInput" type="text"></textarea><br><br>
                 <label>Enter key for decryption</label><br><br>
                 <textarea id="decryptKey" type="text"></textarea>
                 <br><br>
-
                 <button onclick="decrypt()">Decrypt</button>
                 <br>
             </div>
 
             <div class="sidebar">
-                <h3>Usage:</h3>
+                <h2>Usage:</h2>
                 <p>
-
+                  Type the message you want to encrypt/decrypt.
+                </p>
+                <p>
+                  The key must be a word or phrase.
                 </p>
            </div>
 
 
            <div class="about">
+             <h2>How it works:</h2>
               <p>
-                This is information about playfair
+                The way the Playfair Cipher works is by taking the users message and splitting the letters into pairs of 2, if there is an odd letter out, you add the letter 'x' to it. If there is a pair with the same letter, you then have to insert a 'x' between them. Then you create a 5x5 matrix grid that is made of the key phrase and the alphabet language with the exception of the letter 'j' (if message contains the letter 'j', it will be replaced by the letter 'i'). You find where each pair of letters are positioned in the key matrix, and change their positions depending on three cases. First case is if the two letters appear on the same row in the key matrix, then replace each letter by the letter to the right of it (it will overlap to the left side if needed). Second case is if the two letters appear in the same column in the key matrix, then replace each letter by the letter below it (it will go back to the top of the key matrix if needed). Last case is if the two letters are at two opposite corners that form a rectangle, then replace each letter by the letter that forms the other corner of the rectangle which lies on the same row as each letter.
+
+
+              </p>
+
+              <p>
+                  To decrypt the message the same steps as encryption are repeated with the exception of the first and second case, in which you take the letters to the left and above respectively. Must also remove any 'X' that was in the encrypted text.
               </p>
           </div>
       </div>

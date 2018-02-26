@@ -1,4 +1,11 @@
 
+/*
+
+Author: Darwon Rashid
+Matric Number: 40280334
+Description: Encryption and decryption of Simon Wells Cipher.
+
+ */
 
 
 function encrypt()
@@ -10,7 +17,7 @@ function encrypt()
 
     numericKey = parseInt(numericKey);
 
-    if(checkIfTextEmpty(cipher) == false || checkIfKeyEmpty(textKey) == false || checkIfKeyAnInteger(numericKey) == false || checkIfKeyEmpty(numericKey) == false)
+    if(checkIfTextEmpty(cipher) == false || checkIfKeyEmpty(textKey) == false || checkIfKeyAnInteger(numericKey) == false)
     {
       return;
     }
@@ -19,7 +26,7 @@ function encrypt()
     cipher = processString(cipher);
 
     var encryption = "";
-    var keyMatrix = createPlayfairKeyMatrix(textKey);
+    var keyMatrix = createKeyMatrix(textKey);
     var position;
 
     for (var c in cipher)
@@ -35,7 +42,7 @@ function encrypt()
     }
 
     outputEncryption(encryption, textKey);
-    
+
     document.getElementById('decryptNumericKey').value = numericKey;
     document.getElementById('encryptNumericKey').value = '';
 
@@ -50,13 +57,13 @@ function decrypt()
 
   numericKey = parseInt(numericKey);
 
-  if(checkIfTextEmpty(cipher) == false || checkIfKeyEmpty(textKey) == false || checkIfKeyAnInteger(numericKey) == false || checkIfKeyEmpty(numericKey) == false)
+  if(checkIfTextEmpty(cipher) == false || checkIfKeyEmpty(textKey) == false || checkIfKeyAnInteger(numericKey) == false)
   {
     return;
   }
 
   var decryption = "";
-  var keyMatrix = createPlayfairKeyMatrix(textKey);
+  var keyMatrix = createKeyMatrix(textKey);
   var position;
   var tempHolder = "";
 

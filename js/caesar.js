@@ -1,4 +1,11 @@
 
+/*
+
+Author: Darwon Rashid
+Matric Number: 40280334
+Description: Encryption and decryption of Caesar Cipher.
+
+ */
 
 function  encrypt()
 {

@@ -1,3 +1,10 @@
+/*
+
+Author: Darwon Rashid
+Matric Number: 40280334
+Description: Encryption and decryption of Playfair Cipher.
+
+ */
 
 function encrypt()
 {
@@ -9,8 +16,9 @@ function encrypt()
     return;
   }
 
-  var messageMatrix = processPlayfairMessage(message, true);
-  var keyMatrix = createPlayfairKeyMatrix(key);
+
+  var messageMatrix = processMatrixMessage(message, true);
+  var keyMatrix = createKeyMatrix(key);
 
   var cipher = "";
 
@@ -85,26 +93,10 @@ function decrypt()
 
   cipher = cipher.toLowerCase();
 
-  var keyMatrix = createPlayfairKeyMatrix(key);
+  var keyMatrix = createKeyMatrix(key);
   var j = 0;
-  var cipherMatrix = [];
+  var cipherMatrix = processMatrixMessage(cipher, false);
   var message = "";
-
-  for(j = 1; j < cipher.length/ 2 + 1; j++)
-  {
-    cipherMatrix.push([]);
-  }
-
-  j = 0;
-
-  for(var o = 0; o < cipher.length; o++)
-  {
-    if(cipherMatrix[j].length == 2)
-    {
-      j++;
-    }
-    cipherMatrix[j].push(cipher[o]);
-  }
 
   for(var i = 0; i < cipherMatrix.length; i++)
   {

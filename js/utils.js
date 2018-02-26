@@ -15,7 +15,7 @@ function closeNav()
 
 /*HELPER FUNCTIONS USED IN ALL CIPHERS*/
 
-
+// takes a string and gets rid of numbers, whitespace, and any other meta characters.
 function processString(string)
 {
   string = string.replace(/[0-9]/g, '');
@@ -25,6 +25,14 @@ function processString(string)
   return string;
 }
 
+//checks if it is a letter
+function isLetter(c)
+{
+  return c.length == 1 && c.match(/[a-z]/i);
+}
+
+// creates an empty matrix with the size depending on the parameter
+// For example, if sizeOfMatrix is 5, then it makes an empty 5x5 matrix grid
 function createEmptyMatrix(sizeOfMatrix)
 {
   var matrix = [];
@@ -38,6 +46,7 @@ function createEmptyMatrix(sizeOfMatrix)
 
 }
 
+// Checks if user has typed message
 function checkIfTextEmpty(string)
 {
   if(string == "")
@@ -47,6 +56,7 @@ function checkIfTextEmpty(string)
   }
 }
 
+// checks if user has typed key
 function checkIfKeyEmpty(key)
 {
   if(key == "")
@@ -56,6 +66,7 @@ function checkIfKeyEmpty(key)
   }
 }
 
+// checks if user has inserted valid numeric key
 function checkIfKeyAnInteger(key)
 {
   if(!Number.isInteger(key))
@@ -65,6 +76,7 @@ function checkIfKeyAnInteger(key)
   }
 }
 
+// output the encryption and key onto the decryption card textareas
 function outputEncryption(cipher, key)
 {
   document.getElementById('encryptKey').value = '';
@@ -73,6 +85,7 @@ function outputEncryption(cipher, key)
   document.getElementById('encryptInput').value = '';
 }
 
+// output the decryption and key onto the encryption card textareas
 function outputDecryption(message, key)
 {
   document.getElementById('encryptKey').value = key;
@@ -81,7 +94,9 @@ function outputDecryption(message, key)
   document.getElementById('decryptInput').value = '';
 }
 
-/*PLAYFAIR EXCLUSIVE HELPER FUNCTIONS */
+// Playfair and simon wells exclusive ciphers.
+
+//Find a position of a letter in a key matrix and return its row and column
 function findPosition(keyMatrix, letter)
 {
   var x = 0;
@@ -101,8 +116,11 @@ function findPosition(keyMatrix, letter)
   return [x,y];
 }
 
-
-function processPlayfairMessage(message, check)
+// Takes a message and splits it into pairs of 2. The check parameter checks if
+// this is called from the Simon Wells or Playfair cipher for in the simon wells cipher, it
+// does not matter if the pair is the same letter, so there is no need to insert the letter
+// 'x'
+function processMatrixMessage(message, check)
 {
 
   var temp_message = [];
@@ -155,8 +173,8 @@ function processPlayfairMessage(message, check)
   return message_matrix;
 }
 
-
-function createPlayfairKeyMatrix(key)
+// creates a matrix from the key. Used in playfair and simon wells ciphers
+function createKeyMatrix(key)
 {
   var tempMatrix = [];
   var finalMatrix = createEmptyMatrix(5);
